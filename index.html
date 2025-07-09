@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOHN_DOE.dev - Retro Portfolio</title>
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Scanlines effect -->
+    <div class="scanlines-overlay">
+        <div class="scanlines-gradient"></div>
+        <div class="scanlines-pattern"></div>
+    </div>
+
+    <!-- Desktop Header -->
+    <header class="desktop-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="header-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+                <span class="system-name">RETRO_OS v2.1</span>
+                <div class="separator"></div>
+                <div class="system-stats">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                    </svg>
+                    <span>CPU: <span id="cpu-usage">45</span>%</span>
+                    <span>MEM: <span id="memory-usage">62</span>%</span>
+                    <span>PROJ: <span id="project-count">18</span></span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="time-display">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12,6 12,12 16,14"></polyline>
+                    </svg>
+                    <span id="current-time">00:00:00</span>
+                </div>
+                <div id="current-date">01/01/2024</div>
+            </div>
+            <div class="header-right">
+                <div class="status-indicator"></div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="6" x2="12" y2="12"></line>
+                    <line x1="16" y1="16" x2="12" y2="12"></line>
+                </svg>
+                <span class="status-text">ONLINE</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <div class="desktop-grid">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Navigation -->
+                <div class="nav-card">
+                    <div class="card-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <h3>SYSTEM_FILES</h3>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="nav-btn active" data-section="about">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>ABOUT.txt</span>
+                        </button>
+                        <button class="nav-btn" data-section="experience">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <span>WORK.log</span>
+                        </button>
+                        <button class="nav-btn" data-section="projects">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16,18 22,12 16,6"></polyline>
+                                <polyline points="8,6 2,12 8,18"></polyline>
+                            </svg>
+                            <span>PROJECTS/</span>
+                        </button>
+                        <button class="nav-btn" data-section="skills">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <path d="M9 9h6v6H9z"></path>
+                            </svg>
+                            <span>SKILLS.exe</span>
+                        </button>
+                        <button class="nav-btn" data-section="education">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                            <span>EDU.dat</span>
+                        </button>
+                        <button class="nav-btn" data-section="contact">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>CONTACT.bat</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- System Monitor -->
+                <div class="monitor-card">
+                    <div class="card-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                        </svg>
+                        <h3>SYS_MONITOR</h3>
+                    </div>
+                    <div class="monitor-content">
+                        <div class="stat-item">
+                            <div class="stat-label">
+                                <span>CPU Usage</span>
+                                <span id="cpu-percent">45%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="cpu-progress" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">
+                                <span>Memory</span>
+                                <span id="memory-percent">62%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="memory-progress" style="width: 62%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">
+                                <span>Projects</span>
+                                <span id="projects-count">18</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="projects-progress" style="width: 72%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terminal -->
+                <div class="terminal-card">
+                    <div class="card-header">
+                        <div class="terminal-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <path d="M9 9h6v6H9z"></path>
+                            </svg>
+                            <span>TERMINAL</span>
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-dot active"></div>
+                            <div class="control-dot"></div>
+                            <div class="control-dot"></div>
+                        </div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="prompt">&gt;</span>
+                            <span class="command">system_boot.exe</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">Loading portfolio...</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">Initializing modules...</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="typing-text" id="typing-text"></span>
+                            <span class="cursor">|</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">&gt;</span>
+                            <span class="ready">Ready for input...</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <section class="main-content">
+                <div class="content-window">
+                    <div class="window-header">
+                        <div class="window-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10,9 9,9 8,9"></polyline>
+                            </svg>
+                            <span id="window-title-text">ABOUT.TXT</span>
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-dot"></div>
+                            <div class="control-dot"></div>
+                            <div class="control-dot active"></div>
+                        </div>
+                    </div>
+                    <div class="window-content" id="main-content">
+                        <!-- Content will be dynamically loaded here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-stats">
+                    <span>&gt; System uptime: <span id="uptime">247</span> days | Last update: <span id="last-update"></span></span>
+                </div>
+                <div class="footer-info">
+                    <span>© 2024 JOHN_DOE.dev</span>
+                    <span>|</span>
+                    <span>Built with ❤️ and lots of ☕</span>
+                    <span>|</span>
+                    <span>Powered by RETRO_OS</span>
+                </div>
+                <div class="footer-quote">
+                    <span>&gt; "In code we trust, in bugs we debug" - Ancient Developer Proverb</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./JS/main.js"></script>
+</body>
+</html>
