@@ -137,7 +137,7 @@ const portfolioData = {
   
     // Update window title
     const titles = {
-      about: "ABOUT.TXT",
+      about: "DANIEL.TXT",
       experience: "WORK.LOG",
       projects: "PROJECTS.DIR",
       skills: "SKILLS.EXE",
@@ -187,7 +187,7 @@ const portfolioData = {
                       </svg>
                   </div>
                   <div class="profile-info">
-                      <h1>JOHN_DOE.dev</h1>
+                      <h1>DANIEL_GUERRERO.dev</h1>
                       <p class="subtitle">Full Stack Developer | Digital Architect</p>
                       <div class="profile-tags">
                           <div class="tag">
@@ -217,7 +217,8 @@ const portfolioData = {
                           </svg>
                           &gt; SYSTEM_INFO:
                       </h3>
-                      <p>Passionate developer with 5+ years of experience crafting digital solutions. Specialized in modern web technologies and retro-inspired interfaces. Currently building the future while honoring the past.</p>
+                      <p>Passionate developer with 5+ years of experience crafting digital solutions.
+                       Specialized in modern web technologies and retro-inspired interfaces. Currently building the future while honoring the past.</p>
                       <ul class="status-list">
                           <li class="status-item">
                               <div class="status-dot pulse"></div>
@@ -263,10 +264,11 @@ const portfolioData = {
               </div>
               
               <div class="ascii-art">
-      <pre>╔══════════════════════════════════════╗
-  ║  "Code is poetry written in logic"   ║
-  ║           - Anonymous Hacker         ║
-  ╚══════════════════════════════════════╝</pre>
+      <pre>
+╔══════════════════════════════════════╗
+║  "Code is poetry written in logic"   ║
+║           - Anonymous Hacker         ║
+╚══════════════════════════════════════╝</pre>
   </div>
           </div>
       `
