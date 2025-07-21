@@ -18,21 +18,13 @@ const portfolioData = {
         lines: "8,750",
       },
       {
-        title: "RETRO_GAME.rom",
+        title: "RETRO_GAME.bat",
         description: "Browser-based retro arcade game with pixel art graphics and multiplayer support",
         tech: ["Canvas", "JavaScript", "CSS3", "HTML5", "WebRTC"],
         status: "COMPLETE",
         year: "2023",
         lines: "12,300",
-      },
-      {
-        title: "E_COMMERCE.dll",
-        description: "Full-stack e-commerce platform with payment integration and inventory management",
-        tech: ["Next.js", "Stripe", "PostgreSQL", "Prisma", "Tailwind"],
-        status: "DEPLOYED",
-        year: "2024",
-        lines: "22,100",
-      },
+      }
     ],
     skills: [
       { name: "JavaScript", level: 95, category: "Frontend" },
@@ -217,8 +209,9 @@ const portfolioData = {
                           </svg>
                           &gt; SYSTEM_INFO:
                       </h3>
-                      <p>Passionate developer with 5+ years of experience crafting digital solutions.
-                       Specialized in modern web technologies and retro-inspired interfaces. Currently building the future while honoring the past.</p>
+                      <p>I am a Full Stack software developer focused on professional and personal growth. I work with Python, HTML, CSS, JavaScript, and MySQL, and I have experience building web applications using REST APIs and JSON Server.
+
+I am proactive, adaptable, and value clear communication and teamwork. I’m always eager to learn and contribute to meaningful projects.</p>
                       <ul class="status-list">
                           <li class="status-item">
                               <div class="status-dot pulse"></div>
@@ -244,11 +237,11 @@ const portfolioData = {
                       </h3>
                       <div class="stats-grid">
                           <div class="stat-card">
-                              <div class="stat-number">50+</div>
+                              <div class="stat-number">3</div>
                               <div class="stat-label">Projects</div>
                           </div>
                           <div class="stat-card">
-                              <div class="stat-number">5+</div>
+                              <div class="stat-number">1</div>
                               <div class="stat-label">Years Exp</div>
                           </div>
                           <div class="stat-card">
@@ -289,37 +282,13 @@ const portfolioData = {
               </div>
               
               <div class="experience-list">
-                  ${portfolioData.experience
-                    .map(
-                      (job) => `
                       <div class="experience-card">
                           <div class="experience-header">
                               <div>
-                                  <div class="job-title">${job.title}</div>
-                                  <div class="company-name">${job.company}</div>
+                                  <div class="job-title">COMING SOON</div>
                               </div>
-                              <div class="badge">${job.period}</div>
-                          </div>
-                          <div class="job-description">${job.description}</div>
-                          <div class="achievements">
-                              <h4>Key Achievements:</h4>
-                              <ul>
-                                  ${job.achievements
-                                    .map(
-                                      (achievement) => `
-                                      <li>
-                                          <div class="achievement-dot"></div>
-                                          ${achievement}
-                                      </li>
-                                  `,
-                                    )
-                                    .join("")}
-                              </ul>
                           </div>
                       </div>
-                  `,
-                    )
-                    .join("")}
               </div>
           </div>
       `
