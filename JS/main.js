@@ -2,41 +2,39 @@
 const portfolioData = {
     projects: [
       {
-        title: "NEURAL_NET.exe",
-        description: "AI-powered web application with machine learning capabilities and real-time data processing",
-        tech: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+        title: "F1_SIMULATOR.exe",
+        description: "Interactive site to explore F1 information using a public API.",
+        tech: ["JavaScript", "HTML", "CSS", "BootStrap"],
         status: "ACTIVE",
-        year: "2024",
-        lines: "15,420",
+        year: "2025",
+        lines: "+7000",
       },
       {
-        title: "CRYPTO_TRACKER.bat",
-        description: "Real-time cryptocurrency monitoring dashboard with advanced analytics and alerts",
-        tech: ["JavaScript", "WebSocket", "Chart.js", "API", "Redis"],
-        status: "RUNNING",
-        year: "2023",
-        lines: "8,750",
+        title: "Kario_Media.exe",
+        description: "Web platform to manage projects and progress for a digital consulting firm.",
+        tech: ["HTML", "CSS"],
+        status: "ACTIVE",
+        year: "2025",
+        lines: "+5000",
       },
       {
-        title: "RETRO_GAME.bat",
-        description: "Browser-based retro arcade game with pixel art graphics and multiplayer support",
-        tech: ["Canvas", "JavaScript", "CSS3", "HTML5", "WebRTC"],
+        title: "CAMPUS_PLATFORM.exe",
+        description: "Educational platform to manage courses, users, and learning content.",
+        tech: ["Python"],
         status: "COMPLETE",
-        year: "2023",
-        lines: "12,300",
+        year: "2025",
+        lines: "+2000",
       }
     ],
     skills: [
-      { name: "JavaScript", level: 95, category: "Frontend" },
-      { name: "TypeScript", level: 90, category: "Frontend" },
-      { name: "React", level: 92, category: "Frontend" },
-      { name: "Next.js", level: 88, category: "Frontend" },
-      { name: "Node.js", level: 85, category: "Backend" },
-      { name: "Python", level: 80, category: "Backend" },
-      { name: "MongoDB", level: 75, category: "Database" },
-      { name: "PostgreSQL", level: 82, category: "Database" },
-      { name: "Docker", level: 78, category: "DevOps" },
-      { name: "AWS", level: 70, category: "DevOps" },
+      { name: "JavaScript", level: 90, category: "Frontend" },
+      { name: "Html", level: 99, category: "Frontend" },
+      { name: "CSS", level: 99, category: "Frontend" },
+      { name: "Node.js", level: 30, category: "Backend" },
+      { name: "Python", level: 85, category: "Backend" },
+      { name: "MongoDB", level: 90, category: "Database" },
+      { name: "MySQL", level: 89, category: "Database" },
+      { name: "Coming Soon", level: 100, category: "DevOps" }
     ],
     experience: [
       {
@@ -63,23 +61,22 @@ const portfolioData = {
     ],
     education: [
       {
-        degree: "Computer Science B.S.",
-        school: "Tech University",
-        year: "2019",
+        degree: "Full Stack Web Development",
+        school: "Campuslands",
+        year: "2024-2025",
         gpa: "3.8/4.0",
       },
       {
-        degree: "Full Stack Web Development",
-        school: "Code Academy",
-        year: "2018",
+        degree: "System Technician",
+        school: "SENA",
+        year: "2023-2024",
         gpa: "Certificate",
       },
     ],
     certifications: [
-      "AWS Certified Developer",
-      "Google Cloud Professional",
-      "MongoDB Certified Developer",
-      "React Advanced Certification",
+      "Python Essentials",
+      "Microsoft Office Specialist: Excel Associate",
+      "Introduction to IoT"
     ],
   }
   
@@ -129,7 +126,7 @@ const portfolioData = {
   
     // Update window title
     const titles = {
-      about: "DANIEL.TXT",
+      about: "ABOUT.TXT",
       experience: "WORK.LOG",
       projects: "PROJECTS.DIR",
       skills: "SKILLS.EXE",
@@ -498,7 +495,7 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                               </svg>
                               <div>
                                   <div class="contact-label">EMAIL</div>
-                                  <div class="contact-value">john.doe@retro.dev</div>
+                                  <div class="contact-value">dg1049291388@gmail.com</div>
                               </div>
                           </div>
                           <button class="btn">CONNECT</button>
@@ -513,7 +510,7 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                               </svg>
                               <div>
                                   <div class="contact-label">GITHUB</div>
-                                  <div class="contact-value">/johndoe-dev</div>
+                                  <div class="contact-value">/Danny200523</div>
                               </div>
                           </div>
                           <button class="btn">CONNECT</button>
@@ -530,7 +527,7 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                               </svg>
                               <div>
                                   <div class="contact-label">LINKEDIN</div>
-                                  <div class="contact-value">/in/johndoe</div>
+                                  <div class="contact-value">/in/daniel-esteban-guerrero-quintero-b16173356</div>
                               </div>
                           </div>
                           <button class="btn">CONNECT</button>
@@ -546,7 +543,7 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                               </svg>
                               <div>
                                   <div class="contact-label">DISCORD</div>
-                                  <div class="contact-value">JohnDoe#1337</div>
+                                  <div class="contact-value">danny_2005_</div>
                               </div>
                           </div>
                           <button class="btn">CONNECT</button>
