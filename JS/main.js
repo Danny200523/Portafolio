@@ -170,10 +170,7 @@ const portfolioData = {
           <div class="about-content">
               <div class="profile-section">
                   <div class="profile-avatar">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                          <circle cx="12" cy="7" r="4"></circle>
-                      </svg>
+                        <img class="avatar" src="../storage/img/dll.jpeg"/>
                   </div>
                   <div class="profile-info">
                       <h1>DANIEL_GUERRERO.dev</h1>

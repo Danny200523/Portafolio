@@ -427,8 +427,8 @@
   }
   
   .profile-avatar {
-    width: 120px;
-    height: 120px;
+    width: auto;
+    height: auto;
     margin: 0 auto;
     border: 2px solid #00ff00;
     border-radius: 8px;
@@ -439,6 +439,10 @@
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
+  }
+
+  .avatar{
+    object-fit: fill;
   }
   
   .profile-avatar svg {
