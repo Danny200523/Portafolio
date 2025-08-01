@@ -443,6 +443,7 @@
 
   .avatar{
     object-fit: fill;
+    width: auto;
   }
   
   .profile-avatar svg {
@@ -1229,13 +1230,13 @@
     }
   
     .profile-avatar {
-      width: 100px;
-      height: 100px;
+      width: auto;
+      height: auto;
     }
   
     .profile-avatar svg {
-      width: 50px;
-      height: 50px;
+      width: auto;
+      height: auto;
     }
   
     .profile-info h1 {
@@ -1392,13 +1393,13 @@
   
   @media (max-width: 320px) {
     .profile-avatar {
-      width: 80px;
-      height: 80px;
+      width: auto;
+      height: auto;
     }
   
     .profile-avatar svg {
-      width: 40px;
-      height: 40px;
+      width: auto;
+      height: auto;
     }
   
     .profile-info h1 {
