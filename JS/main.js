@@ -170,7 +170,7 @@ const portfolioData = {
           <div class="about-content">
               <div class="profile-section">
                   <div class="profile-avatar">
-                        <img class="avatar" src="../storage/img/dll.jpeg"/>
+                        <img class="avatar" src="../storage/img/dll.jpeg">
                   </div>
                   <div class="profile-info">
                       <h1>DANIEL_GUERRERO.dev</h1>
