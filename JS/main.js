@@ -1,172 +1,191 @@
 // Data
 const portfolioData = {
-    projects: [
-      {
-        title: "F1_SIMULATOR.exe",
-        description: "Interactive site to explore F1 information using a public API.",
-        tech: ["JavaScript", "HTML", "CSS", "BootStrap"],
-        status: "ACTIVE",
-        year: "2025",
-        lines: "+7000",
-      },
-      {
-        title: "Kario_Media.exe",
-        description: "Web platform to manage projects and progress for a digital consulting firm.",
-        tech: ["HTML", "CSS"],
-        status: "ACTIVE",
-        year: "2025",
-        lines: "+5000",
-      },
-      {
-        title: "CAMPUS_PLATFORM.exe",
-        description: "Educational platform to manage courses, users, and learning content.",
-        tech: ["Python"],
-        status: "COMPLETE",
-        year: "2025",
-        lines: "+2000",
-      }
-    ],
-    skills: [
-      { name: "JavaScript", level: 90, category: "Frontend" },
-      { name: "Html", level: 99, category: "Frontend" },
-      { name: "CSS", level: 99, category: "Frontend" },
-      { name: "Node.js", level: 30, category: "Backend" },
-      { name: "Python", level: 85, category: "Backend" },
-      { name: "MongoDB", level: 90, category: "Database" },
-      { name: "MySQL", level: 89, category: "Database" },
-      { name: "Coming Soon", level: 100, category: "DevOps" }
-    ],
-    experience: [
-      {
-        title: "Senior Full Stack Developer",
-        company: "TechCorp Industries",
-        period: "2022 - Present",
-        description: "Leading development of enterprise web applications and mentoring junior developers.",
-        achievements: ["Increased system performance by 40%", "Led team of 5 developers", "Implemented CI/CD pipeline"],
-      },
-      {
-        title: "Frontend Developer",
-        company: "Digital Solutions Ltd",
-        period: "2020 - 2022",
-        description: "Developed responsive web applications using modern JavaScript frameworks.",
-        achievements: ["Built 15+ client projects", "Reduced load times by 60%", "Implemented design system"],
-      },
-      {
-        title: "Junior Developer",
-        company: "StartupXYZ",
-        period: "2019 - 2020",
-        description: "Started career building web applications and learning industry best practices.",
-        achievements: ["Completed 50+ bug fixes", "Learned 5 new technologies", "Contributed to open source"],
-      },
-    ],
-    education: [
-      {
-        degree: "Full Stack Web Development",
-        school: "Campuslands",
-        year: "2024-2025",
-        gpa: "3.8/4.0",
-      },
-      {
-        degree: "System Technician",
-        school: "SENA",
-        year: "2023-2024",
-        gpa: "Certificate",
-      },
-    ],
-    certifications: [
-      "Python Essentials",
-      "Microsoft Office Specialist: Excel Associate",
-      "Introduction to IoT"
-    ],
+  projects: [
+    {
+      title: "F1_SIMULATOR.exe",
+      description:
+        "Interactive site to explore F1 information using a public API.",
+      tech: ["JavaScript", "HTML", "CSS", "BootStrap"],
+      status: "ACTIVE",
+      year: "2025",
+      lines: "+7000",
+    },
+    {
+      title: "Kario_Media.exe",
+      description:
+        "Web platform to manage projects and progress for a digital consulting firm.",
+      tech: ["HTML", "CSS"],
+      status: "ACTIVE",
+      year: "2025",
+      lines: "+5000",
+    },
+    {
+      title: "CAMPUS_PLATFORM.exe",
+      description:
+        "Educational platform to manage courses, users, and learning content.",
+      tech: ["Python"],
+      status: "COMPLETE",
+      year: "2025",
+      lines: "+2000",
+    },
+  ],
+  skills: [
+    { name: "JavaScript", level: 90, category: "Frontend" },
+    { name: "Html", level: 99, category: "Frontend" },
+    { name: "CSS", level: 99, category: "Frontend" },
+    { name: "Node.js", level: 30, category: "Backend" },
+    { name: "Python", level: 85, category: "Backend" },
+    { name: "MongoDB", level: 90, category: "Database" },
+    { name: "MySQL", level: 89, category: "Database" },
+    { name: "Coming Soon", level: 100, category: "DevOps" },
+  ],
+  experience: [
+    {
+      title: "Senior Full Stack Developer",
+      company: "TechCorp Industries",
+      period: "2022 - Present",
+      description:
+        "Leading development of enterprise web applications and mentoring junior developers.",
+      achievements: [
+        "Increased system performance by 40%",
+        "Led team of 5 developers",
+        "Implemented CI/CD pipeline",
+      ],
+    },
+    {
+      title: "Frontend Developer",
+      company: "Digital Solutions Ltd",
+      period: "2020 - 2022",
+      description:
+        "Developed responsive web applications using modern JavaScript frameworks.",
+      achievements: [
+        "Built 15+ client projects",
+        "Reduced load times by 60%",
+        "Implemented design system",
+      ],
+    },
+    {
+      title: "Junior Developer",
+      company: "StartupXYZ",
+      period: "2019 - 2020",
+      description:
+        "Started career building web applications and learning industry best practices.",
+      achievements: [
+        "Completed 50+ bug fixes",
+        "Learned 5 new technologies",
+        "Contributed to open source",
+      ],
+    },
+  ],
+  education: [
+    {
+      degree: "Full Stack Web Development",
+      school: "Campuslands",
+      year: "2024-2025",
+      gpa: "3.8/4.0",
+    },
+    {
+      degree: "System Technician",
+      school: "SENA",
+      year: "2023-2024",
+      gpa: "Certificate",
+    },
+  ],
+  certifications: [
+    "Python Essentials",
+    "Microsoft Office Specialist: Excel Associate",
+    "Introduction to IoT",
+  ],
+};
+
+// State
+let currentSection = "about";
+let typingIndex = 0;
+const typingText =
+  "Welcome to my digital workspace... System initialized successfully.";
+
+// DOM Elements
+const navButtons = document.querySelectorAll(".nav-btn");
+const mainContent = document.getElementById("main-content");
+const windowTitle = document.getElementById("window-title-text");
+const typingElement = document.getElementById("typing-text");
+const currentTimeElement = document.getElementById("current-time");
+const currentDateElement = document.getElementById("current-date");
+const lastUpdateElement = document.getElementById("last-update");
+const uptimeElement = document.getElementById("uptime");
+
+// Initialize
+document.addEventListener("DOMContentLoaded", () => {
+  initializeApp();
+});
+
+function initializeApp() {
+  setupNavigation();
+  startTypingAnimation();
+  startClock();
+  startSystemStats();
+  loadSection("about");
+  updateFooter();
+}
+
+// Navigation
+function setupNavigation() {
+  navButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const section = this.dataset.section;
+      switchSection(section);
+    });
+  });
+}
+
+function switchSection(section) {
+  // Update active button
+  navButtons.forEach((btn) => btn.classList.remove("active"));
+  document.querySelector(`[data-section="${section}"]`).classList.add("active");
+
+  // Update window title
+  const titles = {
+    about: "ABOUT.TXT",
+    experience: "WORK.LOG",
+    projects: "PROJECTS.DIR",
+    skills: "SKILLS.EXE",
+    education: "EDU.DAT",
+    contact: "CONTACT.BAT",
+  };
+  windowTitle.textContent = titles[section];
+
+  // Load content
+  loadSection(section);
+  currentSection = section;
+}
+
+function loadSection(section) {
+  const content = generateSectionContent(section);
+  mainContent.innerHTML = content;
+}
+
+// Content Generation
+function generateSectionContent(section) {
+  switch (section) {
+    case "about":
+      return generateAboutContent();
+    case "experience":
+      return generateExperienceContent();
+    case "projects":
+      return generateProjectsContent();
+    case "skills":
+      return generateSkillsContent();
+    case "education":
+      return generateEducationContent();
+    case "contact":
+      return generateContactContent();
+    default:
+      return "<div>Section not found</div>";
   }
-  
-  // State
-  let currentSection = "about"
-  let typingIndex = 0
-  const typingText = "Welcome to my digital workspace... System initialized successfully."
-  
-  // DOM Elements
-  const navButtons = document.querySelectorAll(".nav-btn")
-  const mainContent = document.getElementById("main-content")
-  const windowTitle = document.getElementById("window-title-text")
-  const typingElement = document.getElementById("typing-text")
-  const currentTimeElement = document.getElementById("current-time")
-  const currentDateElement = document.getElementById("current-date")
-  const lastUpdateElement = document.getElementById("last-update")
-  const uptimeElement = document.getElementById("uptime")
-  
-  // Initialize
-  document.addEventListener("DOMContentLoaded", () => {
-    initializeApp()
-  })
-  
-  function initializeApp() {
-    setupNavigation()
-    startTypingAnimation()
-    startClock()
-    startSystemStats()
-    loadSection("about")
-    updateFooter()
-  }
-  
-  // Navigation
-  function setupNavigation() {
-    navButtons.forEach((button) => {
-      button.addEventListener("click", function () {
-        const section = this.dataset.section
-        switchSection(section)
-      })
-    })
-  }
-  
-  function switchSection(section) {
-    // Update active button
-    navButtons.forEach((btn) => btn.classList.remove("active"))
-    document.querySelector(`[data-section="${section}"]`).classList.add("active")
-  
-    // Update window title
-    const titles = {
-      about: "ABOUT.TXT",
-      experience: "WORK.LOG",
-      projects: "PROJECTS.DIR",
-      skills: "SKILLS.EXE",
-      education: "EDU.DAT",
-      contact: "CONTACT.BAT",
-    }
-    windowTitle.textContent = titles[section]
-  
-    // Load content
-    loadSection(section)
-    currentSection = section
-  }
-  
-  function loadSection(section) {
-    const content = generateSectionContent(section)
-    mainContent.innerHTML = content
-  }
-  
-  // Content Generation
-  function generateSectionContent(section) {
-    switch (section) {
-      case "about":
-        return generateAboutContent()
-      case "experience":
-        return generateExperienceContent()
-      case "projects":
-        return generateProjectsContent()
-      case "skills":
-        return generateSkillsContent()
-      case "education":
-        return generateEducationContent()
-      case "contact":
-        return generateContactContent()
-      default:
-        return "<div>Section not found</div>"
-    }
-  }
-  
-  function generateAboutContent() {
-    return `
+}
+
+function generateAboutContent() {
+  return `
           <div class="about-content">
               <div class="profile-section">
                   <div class="profile-avatar">
@@ -256,13 +275,18 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
 ║  "Code is poetry written in logic"   ║
 ║           - Anonymous Hacker         ║
 ╚══════════════════════════════════════╝</pre>
+                </div>
+                <div class="video-pre">
+  <div class="video-wrapper">
+    <iframe class="vv-pre" src="https://www.youtube.com/embed/7gDDD7iFlHM" title="Presentación de Daniel Guerrero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-          </div>
-      `
-  }
-  
-  function generateExperienceContent() {
-    return `
+</div>
+            </div>
+      `;
+}
+
+function generateExperienceContent() {
+  return `
           <div class="experience-content">
               <div class="section-header">
                   <h2>
@@ -285,11 +309,11 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                       </div>
               </div>
           </div>
-      `
-  }
-  
-  function generateProjectsContent() {
-    return `
+      `;
+}
+
+function generateProjectsContent() {
+  return `
           <div class="projects-content">
               <div class="section-header">
                   <h2>
@@ -313,12 +337,21 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                                   <div class="badge">${project.status}</div>
                               </div>
                           </div>
-                          <div class="project-description">${project.description}</div>
+                          <div class="project-description">${
+                            project.description
+                          }</div>
                           <div class="tech-tags">
-                              ${project.tech.map((tech) => `<div class="tech-tag">${tech}</div>`).join("")}
+                              ${project.tech
+                                .map(
+                                  (tech) =>
+                                    `<div class="tech-tag">${tech}</div>`
+                                )
+                                .join("")}
                           </div>
                           <div class="project-footer">
-                              <div class="project-stats">Lines of code: ${project.lines}</div>
+                              <div class="project-stats">Lines of code: ${
+                                project.lines
+                              }</div>
                               <div class="project-buttons">
                                   <button class="btn">
                                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -337,18 +370,18 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                               </div>
                           </div>
                       </div>
-                  `,
+                  `
                     )
                     .join("")}
               </div>
           </div>
-      `
-  }
-  
-  function generateSkillsContent() {
-    const categories = ["Frontend", "Backend", "Database", "DevOps"]
-  
-    return `
+      `;
+}
+
+function generateSkillsContent() {
+  const categories = ["Frontend", "Backend", "Database", "DevOps"];
+
+  return `
           <div class="skills-content">
               <div class="section-header">
                   <h2>
@@ -385,12 +418,12 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                                           <div class="progress-fill" style="width: ${skill.level}%"></div>
                                       </div>
                                   </div>
-                              `,
+                              `
                                 )
                                 .join("")}
                           </div>
                       </div>
-                  `,
+                  `
                     )
                     .join("")}
               </div>
@@ -400,11 +433,11 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                   <span class="ready">All systems operational. Ready for deployment.</span>
               </div>
           </div>
-      `
-  }
-  
-  function generateEducationContent() {
-    return `
+      `;
+}
+
+function generateEducationContent() {
+  return `
           <div class="education-content">
               <div class="section-header">
                   <h2>
@@ -435,7 +468,7 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                                       </div>
                                   </div>
                               </div>
-                          `,
+                          `
                             )
                             .join("")}
                       </div>
@@ -454,18 +487,18 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                                   </svg>
                                   <span class="certification-name">${cert}</span>
                               </div>
-                          `,
+                          `
                             )
                             .join("")}
                       </div>
                   </div>
               </div>
           </div>
-      `
-  }
-  
-  function generateContactContent() {
-    return `
+      `;
+}
+
+function generateContactContent() {
+  return `
           <div class="contact-content">
               <div class="section-header">
                   <h2>
@@ -574,84 +607,84 @@ I am proactive, adaptable, and value clear communication and teamwork. I’m alw
                   <span class="ready">All communication protocols active. Standing by for incoming transmissions...</span>
               </div>
           </div>
-      `
-  }
-  
-  // Animations and Effects
-  function startTypingAnimation() {
-    function typeNextCharacter() {
-      if (typingIndex < typingText.length) {
-        typingElement.textContent = typingText.slice(0, typingIndex + 1)
-        typingIndex++
-        setTimeout(typeNextCharacter, 80)
-      }
+      `;
+}
+
+// Animations and Effects
+function startTypingAnimation() {
+  function typeNextCharacter() {
+    if (typingIndex < typingText.length) {
+      typingElement.textContent = typingText.slice(0, typingIndex + 1);
+      typingIndex++;
+      setTimeout(typeNextCharacter, 80);
     }
-    typeNextCharacter()
   }
-  
-  function startClock() {
-    function updateTime() {
-      const now = new Date()
-      currentTimeElement.textContent = now.toLocaleTimeString()
-      currentDateElement.textContent = now.toLocaleDateString()
-    }
-  
-    updateTime()
-    setInterval(updateTime, 1000)
+  typeNextCharacter();
+}
+
+function startClock() {
+  function updateTime() {
+    const now = new Date();
+    currentTimeElement.textContent = now.toLocaleTimeString();
+    currentDateElement.textContent = now.toLocaleDateString();
   }
-  
-  function startSystemStats() {
-    function updateStats() {
-      const cpu = Math.floor(Math.random() * 30) + 20
-      const memory = Math.floor(Math.random() * 40) + 40
-      const projects = Math.floor(Math.random() * 10) + 15
-  
-      // Update header stats
-      document.getElementById("cpu-usage").textContent = cpu
-      document.getElementById("memory-usage").textContent = memory
-      document.getElementById("project-count").textContent = projects
-  
-      // Update monitor stats
-      document.getElementById("cpu-percent").textContent = cpu + "%"
-      document.getElementById("memory-percent").textContent = memory + "%"
-      document.getElementById("projects-count").textContent = projects
-  
-      // Update progress bars
-      document.getElementById("cpu-progress").style.width = cpu + "%"
-      document.getElementById("memory-progress").style.width = memory + "%"
-      document.getElementById("projects-progress").style.width = (projects / 25) * 100 + "%"
-    }
-  
-    updateStats()
-    setInterval(updateStats, 2000)
+
+  updateTime();
+  setInterval(updateTime, 1000);
+}
+
+function startSystemStats() {
+  function updateStats() {
+    const cpu = Math.floor(Math.random() * 30) + 20;
+    const memory = Math.floor(Math.random() * 40) + 40;
+    const projects = Math.floor(Math.random() * 10) + 15;
+
+    // Update header stats
+    document.getElementById("cpu-usage").textContent = cpu;
+    document.getElementById("memory-usage").textContent = memory;
+    document.getElementById("project-count").textContent = projects;
+
+    // Update monitor stats
+    document.getElementById("cpu-percent").textContent = cpu + "%";
+    document.getElementById("memory-percent").textContent = memory + "%";
+    document.getElementById("projects-count").textContent = projects;
+
+    // Update progress bars
+    document.getElementById("cpu-progress").style.width = cpu + "%";
+    document.getElementById("memory-progress").style.width = memory + "%";
+    document.getElementById("projects-progress").style.width =
+      (projects / 25) * 100 + "%";
   }
-  
-  function updateFooter() {
-    const now = new Date()
-    lastUpdateElement.textContent = now.toLocaleDateString()
-    uptimeElement.textContent = Math.floor(Math.random() * 365)
-  }
-  
-  // Form handling
-  document.addEventListener("submit", (e) => {
-    if (e.target.id === "contact-form") {
-      e.preventDefault()
-  
-      // Simulate form submission
-      const submitButton = e.target.querySelector(".form-submit")
-      const originalText = submitButton.textContent
-  
-      submitButton.textContent = "SENDING..."
-      submitButton.disabled = true
-  
+
+  updateStats();
+  setInterval(updateStats, 2000);
+}
+
+function updateFooter() {
+  const now = new Date();
+  lastUpdateElement.textContent = now.toLocaleDateString();
+  uptimeElement.textContent = Math.floor(Math.random() * 365);
+}
+
+// Form handling
+document.addEventListener("submit", (e) => {
+  if (e.target.id === "contact-form") {
+    e.preventDefault();
+
+    // Simulate form submission
+    const submitButton = e.target.querySelector(".form-submit");
+    const originalText = submitButton.textContent;
+
+    submitButton.textContent = "SENDING...";
+    submitButton.disabled = true;
+
+    setTimeout(() => {
+      submitButton.textContent = "MESSAGE_SENT.exe";
       setTimeout(() => {
-        submitButton.textContent = "MESSAGE_SENT.exe"
-        setTimeout(() => {
-          submitButton.textContent = originalText
-          submitButton.disabled = false
-          e.target.reset()
-        }, 2000)
-      }, 1500)
-    }
-  })
-  
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+        e.target.reset();
+      }, 2000);
+    }, 1500);
+  }
+});
